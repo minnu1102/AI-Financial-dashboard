@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>💰 AI Finance Dashboard</h1>
+
+        <!-- Budget Section -->
+        <div class="section">
+            <h2>Set Monthly Budget</h2>
+            <input type="number" id="budget" placeholder="Enter Budget" />
+            <p>Budget Remaining: <span id="budget-remaining">$0.00</span></p>
+        </div>
+
+        <!-- Transaction Section -->
+        <div class="section">
+            <h2>Add Transaction</h2>
+            <input type="text" id="description" placeholder="Description" />
+            <input type="number" id="amount" placeholder="Amount" />
+            <select id="category">
+                <option value="Food">Food</option>
+                <option value="Rent">Rent</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Investing">Tnvesting</option>
+                <option value="Other">Other</option>
+            </select>
+            <button id="addTransactionBtn">Add Transaction</button>
+        </div>
+
+        <!-- Transactions List -->
+        <h2>Transaction History</h2>
+        <ul id="transaction-list"></ul>
+
+        <!-- Charts -->
+        <canvas id="expenseChart"></canvas>
+
+        <!-- Voice Command -->
+        <button id="voiceBtn">🎤 Use Voice</button>
+
+        <!-- Export CSV -->
+        <button id="exportBtn">Export CSV</button>
+    </div>
+</body>
+</html>
